@@ -15,6 +15,7 @@ namespace ClassRoom
 
         public ClassRoom()
         {
+            Students = new List<Student>();
         }
 
         public string ClassName { get => _className; set => _className = value; }

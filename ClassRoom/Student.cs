@@ -23,5 +23,10 @@ namespace ClassRoom
         public string Name { get => _name; private set => _name = value; }
         public int BMonth { get => _bMonth; private set => _bMonth = value; }
         public int BDay { get => _bDay; private set => _bDay = value; }
+
+        public override string ToString()
+        {
+            return string.Format("{0}\tborn {1}.{2}", Name, BDay, BMonth);
+        }
     }
 }
