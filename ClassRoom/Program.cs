@@ -20,6 +20,7 @@ namespace ClassRoom
             foreach (Student st in csClass.Students)
             {
                 Console.WriteLine(st);
+                
             }
             Console.ReadKey();
         }
