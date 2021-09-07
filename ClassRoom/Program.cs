@@ -22,6 +22,7 @@ namespace ClassRoom
                 Console.WriteLine(st);
                 
             }
+            csClass.Seasons();
             Console.ReadKey();
         }
     }

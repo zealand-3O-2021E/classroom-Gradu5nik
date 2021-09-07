@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,9 +15,27 @@ namespace ClassRoom
 
         public Student(string name, int bMonth, int bDay)
         {
+            
+
+            
             _name = name;
-            _bMonth = bMonth;
             _bDay = bDay;
+            Debug.Assert(bMonth > 0 && bMonth < 12,$"{name} cannot be born on {bMonth} month");
+            _bMonth = bMonth;
+            //try
+            //{
+            //    if (bMonth < 0 || bMonth > 12) throw (new ArgumentOutOfRangeException(""));
+            //_bMonth = bMonth;
+            //}
+            //catch (ArgumentOutOfRangeException)
+            //{
+            //    Console.WriteLine($"Hey man, there is no {bMonth}th month, be serious, ok let's try again");
+            //    Console.WriteLine($"So your name is {name}, birthday day is {bDay} and birthday month....");
+            //    _bMonth = Convert.ToInt32(Console.ReadLine());
+
+
+
+            //}
         }
         
 
@@ -37,7 +56,7 @@ namespace ClassRoom
                 case 0 when BMonth == 12 || BMonth < 3:
                     return "Winter";
                 default:
-                    return "outside of timespace continium";
+                    return "the outside of timespace continium";
             }
         }
         public override string ToString()
